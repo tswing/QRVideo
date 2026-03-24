@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRVideo - 개인정보처리방침</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #764ba2;
+        }
+
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .content ul, .content ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box strong {
+            color: #667eea;
+        }
+
+        .security-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #999;
+            font-size: 0.95rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        footer {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            color: #666;
+            margin-top: 30px;
+        }
+
+        .toc {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .toc ol {
+            margin-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 개인정보처리방침</h1>
+            <p>QRVideo 개인정보보호 정책</p>
+            <a href="introduce.html" class="nav-link">← 앱 소개로 돌아가기</a>
+        </header>
+
+        <div class="content">
+            <!-- 목차 -->
+            <div class="toc">
+                <h3>📑 목차</h3>
+                <ol>
+                    <li><a href="#section1">개요</a></li>
+                    <li><a href="#section2">수집하는 정보</a></li>
+                    <li><a href="#section3">정보 수집 방식</a></li>
+                    <li><a href="#section4">정보의 사용</a></li>
+                    <li><a href="#section5">정보 보안</a></li>
+                    <li><a href="#section6">데이터 저장 및 삭제</a></li>
+                    <li><a href="#section7">제3자 공유</a></li>
+                    <li><a href="#section8">사용자 권리</a></li>
+                    <li><a href="#section9">정책 변경</a></li>
+                    <li><a href="#section10">문의</a></li>
+                </ol>
+            </div>
+
+            <!-- 1. 개요 -->
+            <h2 id="section1">1. 개요</h2>
+            <p>QRVideo("이하 '앱'"이라 함)는 배송 박스 포장 과정의 비디오 기록 및 관리 서비스를 제공합니다. 우리는 사용자의 개인정보 보호를 최우선으로 생각하며, 본 정책에서 우리의 개인정보 처리 방침을 명확히 설명합니다.</p>
+
+            <div class="security-badge">
+                ✅ <strong>핵심 원칙:</strong> QRVideo는 어떠한 개인정보도 외부로 전송하지 않습니다. 모든 데이터는 사용자의 디바이스에만 존재합니다.
+            </div>
+
+            <!-- 2. 수집하는 정보 -->
+            <h2 id="section2">2. 수집하는 정보</h2>
+            <p>QRVideo는 최소한의 정보만 수집하며, 모든 정보는 전적으로 사용자 제어 하에 있습니다.</p>
+
+            <h3>2.1 수집되는 정보</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>정보 유형</th>
+                            <th>수집 여부</th>
+                            <th>저장 위치</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>비디오 파일</td>
+                            <td>✅ 필수</td>
+                            <td>로컬 디바이스</td>
+                            <td>사용자가 녹화한 포장 영상 (사용자 제어)</td>
+                        </tr>
+                        <tr>
+                            <td>QR/바코드 데이터</td>
+                            <td>✅ 필수</td>
+                            <td>로컬 디바이스</td>
+                            <td>스캔한 송장번호/태그 코드</td>
+                        </tr>
+                        <tr>
+                            <td>메타데이터</td>
+                            <td>✅ 선택</td>
+                            <td>로컬 디바이스</td>
+                            <td>녹화 시간, 메모, 상태 정보</td>
+                        </tr>
+                        <tr>
+                            <td>사용자 프로필</td>
+                            <td>✅ 선택</td>
+                            <td>로컬 디바이스</td>
+                            <td>이름, 팀, ID (선택적 입력)</td>
+                        </tr>
+                        <tr>
+                            <td>앱 설정</td>
+                            <td>✅ 필수</td>
+                            <td>로컬 디바이스</td>
+                            <td>해상도, 프레임률 등 사용자 환경설정</td>
+                        </tr>
+                        <tr>
+                            <td>위치 정보</td>
+                            <td>❌ 수집 안 함</td>
+                            <td>-</td>
+                            <td>GPS/위치 데이터 수집 없음</td>
+                        </tr>
+                        <tr>
+                            <td>연락처 정보</td>
+                            <td>❌ 수집 안 함</td>
+                            <td>-</td>
+                            <td>전화번호, 이메일 자동 수집 없음</td>
+                        </tr>
+                        <tr>
+                            <td>기기 고유 ID</td>
+                            <td>❌ 수집 안 함</td>
+                            <td>-</td>
+                            <td>UDID, IMEI 등 기기 추적 정보 수집 없음</td>
+                        </tr>
+                        <tr>
+                            <td>서드파티 추적</td>
+                            <td>❌ 수집 안 함</td>
+                            <td>-</td>
+                            <td>광고 추적, 분석 서비스 이용 없음</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 3. 정보 수집 방식 -->
+            <h2 id="section3">3. 정보 수집 방식</h2>
+
+            <h3>3.1 명시적 사용자 동의</h3>
+            <ul>
+                <li>카메라 권한: 사용자가 "설정" > "카메라"를 활성화할 때만 카메라 접근</li>
+                <li>파일 저장: 사용자가 녹화 시작 버튼을 누를 때만 파일 저장</li>
+                <li>메타데이터: 사용자가 직접 입력한 정보만 저장</li>
+            </ul>
+
+            <h3>3.2 자동 수집 없음</h3>
+            <ul>
+                <li>QRVideo는 배경에서 사용자 활동을 추적하지 않습니다</li>
+                <li>앱이 종료된 후에도 정보를 수집하지 않습니다</li>
+                <li>외부 서버로 데이터를 전송하지 않습니다</li>
+                <li>쿠키, 트래킹 픽셀 또는 비콘을 사용하지 않습니다</li>
+            </ul>
+
+            <!-- 4. 정보의 사용 -->
+            <h2 id="section4">4. 정보의 사용</h2>
+
+            <h3>4.1 정보 사용 목적</h3>
+            <ul>
+                <li>✅ <strong>앱 기능 제공:</strong> 비디오 녹화, 편집, 재생</li>
+                <li>✅ <strong>데이터 관리:</strong> 비디오 정렬, 검색, 필터링</li>
+                <li>✅ <strong>사용자 경험 개선:</strong> 환경설정 저장 (해상도, 언어 등)</li>
+                <li>✅ <strong>로컬 백업:</strong> 선택적 로컬 저장소 백업</li>
+            </ul>
+
+            <h3>4.2 정보 사용 금지 사항</h3>
+            <ul>
+                <li>❌ 광고 타겟팅</li>
+                <li>❌ 제3자 판매</li>
+                <li>❌ 프로파일링 또는 개인화 추적</li>
+                <li>❌ 마케팅 목적 사용</li>
+                <li>❌ 기계학습/AI 모델 훈련용 데이터 사용</li>
+            </ul>
+
+            <!-- 5. 정보 보안 -->
+            <h2 id="section5">5. 정보 보안</h2>
+
+            <div class="security-badge">
+                🔐 <strong>보안 수준:</strong> 모든 데이터가 사용자 디바이스에만 저장되므로, 최고 수준의 보안이 보장됩니다.
+            </div>
+
+            <h3>5.1 물리적 보안</h3>
+            <ul>
+                <li>모든 데이터는 사용자의 로컬 저장소(SSD, HDD)에만 보관됩니다</li>
+                <li>클라우드 서버에 저장되지 않습니다</li>
+                <li>인터넷 전송이 발생하지 않습니다</li>
+            </ul>
+
+            <h3>5.2 암호화 (선택 사항)</h3>
+            <ul>
+                <li>사용자는 Settings에서 저장 파일 암호화를 활성화할 수 있습니다</li>
+                <li>암호화 활성화 시, 비디오 파일은 AES-256 알고리즘으로 암호화됩니다</li>
+                <li>암호화 키는 사용자의 디바이스에만 보관되며, 외부에서 접근할 수 없습니다</li>
+            </ul>
+
+            <h3>5.3 접근 제어</h3>
+            <ul>
+                <li>사용자 기기의 운영체제 권한 관리에 의존합니다</li>
+                <li>QRVideo는 사용자가 부여한 권한 범위 내에서만 작동합니다</li>
+                <li>기기 화면 잠금/생체 인식 등의 기본 보안 기능이 적용됩니다</li>
+            </ul>
+
+            <h3>5.4 보안 취약점 대응</h3>
+            <ul>
+                <li>QRVideo는 정기적으로 보안 업데이트를 제공합니다</li>
+                <li>보안 이슈 발견 시 즉시 패치를 배포합니다</li>
+                <li>사용자는 항상 최신 버전 사용을 권장합니다</li>
+            </ul>
+
+            <!-- 6. 데이터 저장 및 삭제 -->
+            <h2 id="section6">6. 데이터 저장 및 삭제</h2>
+
+            <h3>6.1 데이터 저장 기간</h3>
+            <ul>
+                <li>모든 데이터는 사용자가 삭제할 때까지 사용자의 디바이스에 보관됩니다</li>
+                <li>자동 삭제 정책은 없으며, 사용자가 전적으로 제어합니다</li>
+                <li>선택 사항: Settings에서 "자동 삭제 규칙"을 설정하면 오래된 파일을 자동 삭제할 수 있습니다</li>
+            </ul>
+
+            <h3>6.2 데이터 삭제 방법</h3>
+            <ul>
+                <li><strong>개별 파일 삭제:</strong> Videos 탭에서 각 클립의 삭제 버튼 클릭</li>
+                <li><strong>대량 삭제:</strong> 날짜 범위 선택 후 일괄 삭제</li>
+                <li><strong>전체 데이터 삭제:</strong> Settings > "모든 데이터 삭제"</li>
+                <li><strong>앱 제거:</strong> 앱 제거 시 모든 관련 데이터 삭제 (기기 설정에서 "저장공간 정리" 옵션)</li>
+            </ul>
+
+            <h3>6.3 삭제된 데이터 복구 불가</h3>
+            <p>삭제된 파일은 복구할 수 없습니다. 중요한 파일은 삭제 전 백업하시기 바랍니다.</p>
+
+            <!-- 7. 제3자 공유 -->
+            <h2 id="section7">7. 제3자 공유</h2>
+
+            <div class="highlight-box">
+                <strong>🔒 제3자 공유 정책:</strong> QRVideo는 사용자의 동의 없이 어떠한 정보도 제3자와 공유하지 않습니다.
+            </div>
+
+            <h3>7.1 공유 불가 정보</h3>
+            <ul>
+                <li>비디오 파일</li>
+                <li>QR/바코드 데이터</li>
+                <li>사용자 프로필 정보</li>
+                <li>메타데이터</li>
+                <li>앱 사용 기록</li>
+            </ul>
+
+            <h3>7.2 사용자 제어 공유</h3>
+            <p>사용자가 직접 선택한 경우에만 공유가 가능합니다:</p>
+            <ul>
+                <li><strong>수동 내보내기:</strong> 사용자가 직접 파일을 내보내기하여 공유</li>
+                <li><strong>링크 생성:</strong> 사용자가 생성한 공유 링크를 통한 공유</li>
+                <li><strong>클라우드 업로드:</strong> 사용자가 선택한 클라우드 서비스(Google Drive, Dropbox 등)에 업로드</li>
+            </ul>
+
+            <h3>7.3 서드파티 서비스</h3>
+            <ul>
+                <li>QRVideo는 서드파티 분석 서비스(Google Analytics, Firebase 등)를 사용하지 않습니다</li>
+                <li>광고 네트워크와 연동되어 있지 않습니다</li>
+                <li>소셜 미디어 플러그인을 포함하지 않습니다</li>
+            </ul>
+
+            <!-- 8. 사용자 권리 -->
+            <h2 id="section8">8. 사용자 권리</h2>
+
+            <h3>8.1 액세스 권리</h3>
+            <p>사용자는 언제든지 자신의 모든 데이터에 접근할 수 있습니다. QRVideo의 Videos 탭에서 모든 녹화된 파일을 확인할 수 있습니다.</p>
+
+            <h3>8.2 수정 권리</h3>
+            <ul>
+                <li>메타데이터 (메모, 상태 등) 편집 가능</li>
+                <li>사용자 프로필 정보 수정 가능</li>
+                <li>앱 설정 변경 가능</li>
+            </ul>
+
+            <h3>8.3 삭제 권리</h3>
+            <ul>
+                <li>개별 비디오 파일 삭제</li>
+                <li>특정 기간의 데이터 일괄 삭제</li>
+                <li>전체 데이터 삭제</li>
+                <li>앱 제거 시 모든 관련 데이터 삭제</li>
+            </ul>
+
+            <h3>8.4 데이터 이동성</h3>
+            <ul>
+                <li>사용자는 언제든지 비디오 파일을 내보낼 수 있습니다</li>
+                <li>지원되는 형식: MP4, AVI, MOV (사용자 선택)</li>
+                <li>메타데이터는 JSON 또는 CSV 형식으로 내보낼 수 있습니다</li>
+            </ul>
+
+            <!-- 9. 정책 변경 -->
+            <h2 id="section9">9. 정책 변경</h2>
+
+            <h3>9.1 변경 공지</h3>
+            <ul>
+                <li>본 개인정보처리방침은 언제든지 변경될 수 있습니다</li>
+                <li>중요한 변경 사항은 앱 업데이트 시 사용자에게 공지됩니다</li>
+                <li>변경 사항이 있을 경우 이 페이지의 "최종 수정일"이 업데이트됩니다</li>
+            </ul>
+
+            <h3>9.2 사용자 동의</h3>
+            <p>앱을 계속 사용함으로써 변경된 정책에 동의한 것으로 간주됩니다. 정책에 동의하지 않으면 앱 사용을 중단하십시오.</p>
+
+            <!-- 10. 문의 -->
+            <h2 id="section10">10. 문의</h2>
+
+            <p>본 개인정보처리방침에 대한 질문이나 우려사항이 있으시면 다음 방법으로 문의하실 수 있습니다:</p>
+
+            <div class="highlight-box">
+                <strong>📧 이메일:</strong> privacy@qrvideo.app<br>
+                <strong>🌐 웹사이트:</strong> www.qrvideo.app<br>
+                <strong>📱 지원:</strong> support@qrvideo.app<br>
+                <strong>📝 피드백:</strong> feedback@qrvideo.app
+            </div>
+
+            <h3>10.1 대응 시간</h3>
+            <p>모든 문의에 대해 5-7 업무일 이내에 답변드립니다.</p>
+
+            <!-- 추가 정보 -->
+            <h2>부록: 앱스토어 규정 준수</h2>
+
+            <h3>Apple App Store 규정 준수</h3>
+            <ul>
+                <li>✅ 개인정보 수집 최소화</li>
+                <li>✅ 사용자 동의 기반 권한 관리</li>
+                <li>✅ 투명한 개인정보처리방침 공개</li>
+                <li>✅ 어린이 개인정보 보호 (COPPA 준수)</li>
+                <li>✅ 데이터 보안 및 암호화</li>
+            </ul>
+
+            <h3>Google Play Store 규정 준수</h3>
+            <ul>
+                <li>✅ 개인정보보호정책 명시</li>
+                <li>✅ 불필요한 권한 요청 금지</li>
+                <li>✅ 명확한 데이터 사용 목적 공시</li>
+                <li>✅ 사용자 데이터 보안 보장</li>
+                <li>✅ 권한 남용 금지</li>
+            </ul>
+
+            <h3>GDPR(유럽 일반 데이터 보호 규정) 준수</h3>
+            <ul>
+                <li>✅ 데이터 주체의 권리 존중</li>
+                <li>✅ 명확한 개인정보처리방침</li>
+                <li>✅ 데이터 최소화 원칙 준수</li>
+                <li>✅ 데이터 보안 의무 이행</li>
+                <li>✅ 데이터 삭제 권리 보장</li>
+            </ul>
+
+            <div class="last-updated">
+                <p>최종 수정일: 2026년 3월 24일</p>
+                <p>QRVideo © 2026. All rights reserved.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p><a href="introduce.html" style="color: #667eea; text-decoration: none;">← 앱 소개로 돌아가기</a></p>
+            <p style="margin-top: 15px;">QRVideo Privacy Policy</p>
+        </footer>
+    </div>
+</body>
+</html>
