@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRVideo - 隐私政策</title>
+    <link rel="icon" type="image/png" href="res/icon.png">
+    <link rel="apple-touch-icon" href="res/icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        header h1 img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .language-selector a {
+            display: inline-block;
+            padding: 8px 12px;
+            margin: 0 5px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .language-selector a.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .language-selector a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #764ba2;
+        }
+
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .content ul, .content ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box strong {
+            color: #667eea;
+        }
+
+        .security-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #999;
+            font-size: 0.95rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        footer {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            color: #666;
+            margin-top: 30px;
+        }
+
+        .toc {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .toc ol {
+            margin-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="language-selector">
+                <a href="privacy.html" class="lang-link">한국어</a>
+                <a href="privacy_us.html" class="lang-link">English</a>
+                <a href="privacy_ch.html" class="lang-link active">中文</a>
+            </div>
+            <h1><img src="res/icon.png" alt="QRVideo Icon"> 隐私政策</h1>
+            <p>QRVideo 数据保护政策</p>
+            <a href="introduce_ch.html" class="nav-link">← 返回应用介绍</a>
+        </header>
+
+        <div class="content">
+            <!-- 目录 -->
+            <div class="toc">
+                <h3>📑 目录</h3>
+                <ol>
+                    <li><a href="#section1">概述</a></li>
+                    <li><a href="#section2">我们收集的信息</a></li>
+                    <li><a href="#section3">信息收集方式</a></li>
+                    <li><a href="#section4">信息使用</a></li>
+                    <li><a href="#section5">信息安全</a></li>
+                    <li><a href="#section6">数据存储和删除</a></li>
+                    <li><a href="#section7">第三方共享</a></li>
+                    <li><a href="#section8">用户权利</a></li>
+                    <li><a href="#section9">政策变更</a></li>
+                    <li><a href="#section10">联系我们</a></li>
+                </ol>
+            </div>
+
+            <!-- 1. 概述 -->
+            <h2 id="section1">1. 概述</h2>
+            <p>QRVideo ("应用程序")提供物流包装过程的视频录制和管理服务。我们优先保护用户隐私,并在本政策中明确说明我们的数据处理实践。</p>
+
+            <div class="security-badge">
+                ✅ <strong>核心原则:</strong> QRVideo不会将任何个人信息传输到外部。所有数据仅存在于用户的设备上。
+            </div>
+
+            <!-- 2. 我们收集的信息 -->
+            <h2 id="section2">2. 我们收集的信息</h2>
+            <p>QRVideo仅收集最少的信息,所有信息完全由用户控制。</p>
+
+            <h3>2.1 收集的信息</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>信息类型</th>
+                            <th>是否收集</th>
+                            <th>存储位置</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>视频文件</td>
+                            <td>✅ 必需</td>
+                            <td>本地设备</td>
+                            <td>用户录制的包装视频(用户控制)</td>
+                        </tr>
+                        <tr>
+                            <td>二维码/条形码数据</td>
+                            <td>✅ 必需</td>
+                            <td>本地设备</td>
+                            <td>扫描的追踪号/标签代码</td>
+                        </tr>
+                        <tr>
+                            <td>元数据</td>
+                            <td>✅ 可选</td>
+                            <td>本地设备</td>
+                            <td>录制时间、备注、状态信息</td>
+                        </tr>
+                        <tr>
+                            <td>用户档案</td>
+                            <td>✅ 可选</td>
+                            <td>本地设备</td>
+                            <td>姓名、团队、ID(可选输入)</td>
+                        </tr>
+                        <tr>
+                            <td>应用设置</td>
+                            <td>✅ 必需</td>
+                            <td>本地设备</td>
+                            <td>分辨率、帧率等用户偏好设置</td>
+                        </tr>
+                        <tr>
+                            <td>位置信息</td>
+                            <td>❌ 不收集</td>
+                            <td>-</td>
+                            <td>无GPS/位置数据收集</td>
+                        </tr>
+                        <tr>
+                            <td>联系信息</td>
+                            <td>❌ 不收集</td>
+                            <td>-</td>
+                            <td>无自动电话/邮箱收集</td>
+                        </tr>
+                        <tr>
+                            <td>设备ID</td>
+                            <td>❌ 不收集</td>
+                            <td>-</td>
+                            <td>无设备追踪(UDID、IMEI等)</td>
+                        </tr>
+                        <tr>
+                            <td>第三方追踪</td>
+                            <td>❌ 不收集</td>
+                            <td>-</td>
+                            <td>无广告追踪或分析服务</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 3. 信息收集方式 -->
+            <h2 id="section3">3. 信息收集方式</h2>
+
+            <h3>3.1 明确用户同意</h3>
+            <ul>
+                <li>摄像头权限:仅当用户启用"设置">"摄像头"时才能访问</li>
+                <li>文件保存:仅当用户点击开始录制按钮时才保存文件</li>
+                <li>元数据:仅保存用户直接输入的信息</li>
+            </ul>
+
+            <h3>3.2 无自动收集</h3>
+            <ul>
+                <li>QRVideo不在后台追踪用户活动</li>
+                <li>应用关闭后不收集数据</li>
+                <li>不将数据传输到外部服务器</li>
+                <li>不使用Cookie、追踪像素或信标</li>
+            </ul>
+
+            <!-- 4. 信息使用 -->
+            <h2 id="section4">4. 信息使用</h2>
+
+            <h3>4.1 信息使用目的</h3>
+            <ul>
+                <li>✅ <strong>应用功能:</strong> 视频录制、编辑、播放</li>
+                <li>✅ <strong>数据管理:</strong> 视频排序、搜索、筛选</li>
+                <li>✅ <strong>用户体验:</strong> 保存偏好设置(分辨率、语言等)</li>
+                <li>✅ <strong>本地备份:</strong> 可选的本地存储备份</li>
+            </ul>
+
+            <h3>4.2 禁止使用</h3>
+            <ul>
+                <li>❌ 广告定向</li>
+                <li>❌ 第三方销售</li>
+                <li>❌ 用户档案或追踪</li>
+                <li>❌ 营销目的</li>
+                <li>❌ 机器学习/AI模型训练</li>
+            </ul>
+
+            <!-- 5. 信息安全 -->
+            <h2 id="section5">5. 信息安全</h2>
+
+            <div class="security-badge">
+                🔐 <strong>安全级别:</strong> 所有数据存储在用户设备上,确保最高级别的安全性。
+            </div>
+
+            <h3>5.1 物理安全</h3>
+            <ul>
+                <li>所有数据仅存储在用户的本地存储(SSD、HDD)上</li>
+                <li>不存储在云服务器上</li>
+                <li>无互联网传输</li>
+            </ul>
+
+            <h3>5.2 加密(可选)</h3>
+            <ul>
+                <li>用户可在"设置"中启用文件加密</li>
+                <li>启用后,视频文件使用AES-256算法加密</li>
+                <li>加密密钥仅保存在用户设备上,外部无法访问</li>
+            </ul>
+
+            <h3>5.3 访问控制</h3>
+            <ul>
+                <li>取决于用户设备的操作系统权限管理</li>
+                <li>QRVideo仅在已授予的权限范围内运行</li>
+                <li>设备锁定/生物识别安全适用</li>
+            </ul>
+
+            <!-- 6. 数据存储和删除 -->
+            <h2 id="section6">6. 数据存储和删除</h2>
+
+            <h3>6.1 数据保留期限</h3>
+            <ul>
+                <li>所有数据在用户删除前保留在用户设备上</li>
+                <li>无自动删除政策;用户完全控制</li>
+                <li>可选:在"设置"中设置"自动删除规则"以删除旧文件</li>
+            </ul>
+
+            <h3>6.2 数据删除方法</h3>
+            <ul>
+                <li><strong>单个文件:</strong> 在"视频"选项卡中单击每个剪辑的删除按钮</li>
+                <li><strong>批量删除:</strong> 选择日期范围并全部删除</li>
+                <li><strong>全部数据:</strong> 设置 > "删除所有数据"</li>
+                <li><strong>应用删除:</strong> 删除应用时删除所有相关数据</li>
+            </ul>
+
+            <!-- 7. 第三方共享 -->
+            <h2 id="section7">7. 第三方共享</h2>
+
+            <div class="highlight-box">
+                <strong>🔒 第三方共享政策:</strong> QRVideo未经用户同意不与任何第三方共享信息。
+            </div>
+
+            <h3>7.1 不可共享信息</h3>
+            <ul>
+                <li>视频文件</li>
+                <li>二维码/条形码数据</li>
+                <li>用户档案信息</li>
+                <li>元数据</li>
+                <li>应用使用历史</li>
+            </ul>
+
+            <h3>7.2 用户控制的共享</h3>
+            <p>仅当用户主动选择时才可能共享:</p>
+            <ul>
+                <li><strong>手动导出:</strong> 用户导出并共享文件</li>
+                <li><strong>共享链接:</strong> 用户生成的共享链接</li>
+                <li><strong>云上传:</strong> 用户上传到选定的云服务</li>
+            </ul>
+
+            <!-- 8. 用户权利 -->
+            <h2 id="section8">8. 用户权利</h2>
+
+            <h3>8.1 访问权利</h3>
+            <p>用户可以随时通过QRVideo的"视频"选项卡访问其所有数据。</p>
+
+            <h3>8.2 修改权利</h3>
+            <ul>
+                <li>编辑元数据(备注、状态等)</li>
+                <li>修改用户档案信息</li>
+                <li>更改应用设置</li>
+            </ul>
+
+            <h3>8.3 删除权利</h3>
+            <ul>
+                <li>删除单个视频文件</li>
+                <li>删除特定日期范围的数据</li>
+                <li>删除所有数据</li>
+                <li>删除应用时删除所有相关数据</li>
+            </ul>
+
+            <!-- 9. 政策变更 -->
+            <h2 id="section9">9. 政策变更</h2>
+
+            <h3>9.1 变更通知</h3>
+            <ul>
+                <li>本隐私政策可能随时变更</li>
+                <li>重大变更通过应用更新进行沟通</li>
+                <li>该页面的"最后更新"日期随变更更新</li>
+            </ul>
+
+            <!-- 10. 联系我们 -->
+            <h2 id="section10">10. 联系我们</h2>
+
+            <p>如对本隐私政策有疑问,请联系:</p>
+
+            <div class="highlight-box">
+                <strong>📧 邮箱:</strong> privacy@qrvideo.app<br>
+                <strong>🌐 网站:</strong> www.qrvideo.app<br>
+                <strong>📱 支持:</strong> support@qrvideo.app<br>
+                <strong>📝 反馈:</strong> feedback@qrvideo.app
+            </div>
+
+            <h3>10.1 响应时间</h3>
+            <p>我们在5-7个工作日内回复所有查询。</p>
+
+            <!-- 合规性 -->
+            <h2>附录:应用商店合规性</h2>
+
+            <h3>Apple App Store合规性</h3>
+            <ul>
+                <li>✅ 最少数据收集</li>
+                <li>✅ 基于同意的权限管理</li>
+                <li>✅ 透明的隐私政策</li>
+                <li>✅ COPPA儿童保护合规</li>
+                <li>✅ 数据安全和加密</li>
+            </ul>
+
+            <h3>Google Play Store合规性</h3>
+            <ul>
+                <li>✅ 隐私政策公开</li>
+                <li>✅ 无不必要的权限</li>
+                <li>✅ 明确的数据使用目的</li>
+                <li>✅ 用户数据安全保证</li>
+                <li>✅ 权限滥用预防</li>
+            </ul>
+
+            <h3>GDPR合规性</h3>
+            <ul>
+                <li>✅ 尊重数据主体权利</li>
+                <li>✅ 明确的隐私政策</li>
+                <li>✅ 数据最小化原则</li>
+                <li>✅ 数据安全义务</li>
+                <li>✅ 数据删除权利</li>
+            </ul>
+
+            <div class="last-updated">
+                <p>最后更新:2026年3月25日</p>
+                <p>QRVideo © 2026. All rights reserved.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p><a href="introduce_ch.html" style="color: #667eea; text-decoration: none;">← 返回应用介绍</a></p>
+            <p style="margin-top: 15px;">QRVideo隐私政策</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRVideo - Privacy Policy</title>
+    <link rel="icon" type="image/png" href="res/icon.png">
+    <link rel="apple-touch-icon" href="res/icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        header h1 img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .language-selector a {
+            display: inline-block;
+            padding: 8px 12px;
+            margin: 0 5px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .language-selector a.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .language-selector a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #764ba2;
+        }
+
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .content ul, .content ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box strong {
+            color: #667eea;
+        }
+
+        .security-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #999;
+            font-size: 0.95rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        footer {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            color: #666;
+            margin-top: 30px;
+        }
+
+        .toc {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .toc ol {
+            margin-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="language-selector">
+                <a href="privacy.html" class="lang-link">한국어</a>
+                <a href="privacy_us.html" class="lang-link active">English</a>
+                <a href="privacy_ch.html" class="lang-link">中文</a>
+            </div>
+            <h1><img src="res/icon.png" alt="QRVideo Icon"> Privacy Policy</h1>
+            <p>QRVideo Data Protection Policy</p>
+            <a href="introduce_us.html" class="nav-link">← Back to App Overview</a>
+        </header>
+
+        <div class="content">
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>📑 Table of Contents</h3>
+                <ol>
+                    <li><a href="#section1">Overview</a></li>
+                    <li><a href="#section2">Information We Collect</a></li>
+                    <li><a href="#section3">How We Collect Information</a></li>
+                    <li><a href="#section4">Use of Information</a></li>
+                    <li><a href="#section5">Information Security</a></li>
+                    <li><a href="#section6">Data Storage and Deletion</a></li>
+                    <li><a href="#section7">Third-party Sharing</a></li>
+                    <li><a href="#section8">User Rights</a></li>
+                    <li><a href="#section9">Policy Changes</a></li>
+                    <li><a href="#section10">Contact Us</a></li>
+                </ol>
+            </div>
+
+            <!-- 1. Overview -->
+            <h2 id="section1">1. Overview</h2>
+            <p>QRVideo ("the App") provides video recording and management services for the shipping box packaging process. We prioritize user privacy protection and clearly explain our data handling practices in this policy.</p>
+
+            <div class="security-badge">
+                ✅ <strong>Core Principle:</strong> QRVideo does not transmit any personal information externally. All data exists only on the user's device.
+            </div>
+
+            <!-- 2. Information We Collect -->
+            <h2 id="section2">2. Information We Collect</h2>
+            <p>QRVideo collects minimal information, and all information is entirely under user control.</p>
+
+            <h3>2.1 Collected Information</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Information Type</th>
+                            <th>Collected</th>
+                            <th>Storage Location</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Video Files</td>
+                            <td>✅ Required</td>
+                            <td>Local Device</td>
+                            <td>Packaging videos recorded by user (user-controlled)</td>
+                        </tr>
+                        <tr>
+                            <td>QR/Barcode Data</td>
+                            <td>✅ Required</td>
+                            <td>Local Device</td>
+                            <td>Scanned tracking/tag codes</td>
+                        </tr>
+                        <tr>
+                            <td>Metadata</td>
+                            <td>✅ Optional</td>
+                            <td>Local Device</td>
+                            <td>Recording time, notes, status information</td>
+                        </tr>
+                        <tr>
+                            <td>User Profile</td>
+                            <td>✅ Optional</td>
+                            <td>Local Device</td>
+                            <td>Name, team, ID (optional input)</td>
+                        </tr>
+                        <tr>
+                            <td>App Settings</td>
+                            <td>✅ Required</td>
+                            <td>Local Device</td>
+                            <td>Resolution, frame rate, and other preferences</td>
+                        </tr>
+                        <tr>
+                            <td>Location Information</td>
+                            <td>❌ Not Collected</td>
+                            <td>-</td>
+                            <td>No GPS/location data collection</td>
+                        </tr>
+                        <tr>
+                            <td>Contact Information</td>
+                            <td>❌ Not Collected</td>
+                            <td>-</td>
+                            <td>No automatic phone/email collection</td>
+                        </tr>
+                        <tr>
+                            <td>Device ID</td>
+                            <td>❌ Not Collected</td>
+                            <td>-</td>
+                            <td>No device tracking (UDID, IMEI, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td>Third-party Tracking</td>
+                            <td>❌ Not Collected</td>
+                            <td>-</td>
+                            <td>No ad tracking or analytics services</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 3. How We Collect Information -->
+            <h2 id="section3">3. How We Collect Information</h2>
+
+            <h3>3.1 Explicit User Consent</h3>
+            <ul>
+                <li>Camera Permission: Access only when user enables "Settings" > "Camera"</li>
+                <li>File Saving: Save only when user clicks record start button</li>
+                <li>Metadata: Only information user directly inputs is saved</li>
+            </ul>
+
+            <h3>3.2 No Automatic Collection</h3>
+            <ul>
+                <li>QRVideo does not track user activity in the background</li>
+                <li>Data is not collected after app closes</li>
+                <li>Data is not transmitted to external servers</li>
+                <li>No cookies, tracking pixels, or beacons are used</li>
+            </ul>
+
+            <!-- 4. Use of Information -->
+            <h2 id="section4">4. Use of Information</h2>
+
+            <h3>4.1 Information Use Purposes</h3>
+            <ul>
+                <li>✅ <strong>App Functionality:</strong> Video recording, editing, playback</li>
+                <li>✅ <strong>Data Management:</strong> Video sorting, searching, filtering</li>
+                <li>✅ <strong>User Experience:</strong> Save preferences (resolution, language, etc.)</li>
+                <li>✅ <strong>Local Backup:</strong> Optional local storage backup</li>
+            </ul>
+
+            <h3>4.2 Prohibited Uses</h3>
+            <ul>
+                <li>❌ Ad targeting</li>
+                <li>❌ Third-party sales</li>
+                <li>❌ Profiling or tracking</li>
+                <li>❌ Marketing purposes</li>
+                <li>❌ Machine learning/AI model training</li>
+            </ul>
+
+            <!-- 5. Information Security -->
+            <h2 id="section5">5. Information Security</h2>
+
+            <div class="security-badge">
+                🔐 <strong>Security Level:</strong> All data stored on user device ensures maximum security.
+            </div>
+
+            <h3>5.1 Physical Security</h3>
+            <ul>
+                <li>All data stored only on user's local storage (SSD, HDD)</li>
+                <li>Not stored on cloud servers</li>
+                <li>No internet transmission occurs</li>
+            </ul>
+
+            <h3>5.2 Encryption (Optional)</h3>
+            <ul>
+                <li>Users can enable file encryption in Settings</li>
+                <li>When enabled, video files encrypted with AES-256</li>
+                <li>Encryption keys stored only on user's device, inaccessible externally</li>
+            </ul>
+
+            <h3>5.3 Access Control</h3>
+            <ul>
+                <li>Depends on user device's OS permission management</li>
+                <li>QRVideo operates only within granted permissions</li>
+                <li>Device lock/biometric security applies</li>
+            </ul>
+
+            <!-- 6. Data Storage and Deletion -->
+            <h2 id="section6">6. Data Storage and Deletion</h2>
+
+            <h3>6.1 Data Retention Period</h3>
+            <ul>
+                <li>All data retained on user device until user deletes</li>
+                <li>No automatic deletion policy; user has full control</li>
+                <li>Optional: Set "auto-delete rules" in Settings for old files</li>
+            </ul>
+
+            <h3>6.2 Data Deletion Methods</h3>
+            <ul>
+                <li><strong>Individual File:</strong> Click delete button for each clip in Videos tab</li>
+                <li><strong>Bulk Delete:</strong> Select date range and delete all</li>
+                <li><strong>All Data:</strong> Settings > "Delete All Data"</li>
+                <li><strong>App Removal:</strong> Remove app to delete all related data</li>
+            </ul>
+
+            <!-- 7. Third-party Sharing -->
+            <h2 id="section7">7. Third-party Sharing</h2>
+
+            <div class="highlight-box">
+                <strong>🔒 Third-party Sharing Policy:</strong> QRVideo does not share any information with third parties without user consent.
+            </div>
+
+            <h3>7.1 Non-shareable Information</h3>
+            <ul>
+                <li>Video files</li>
+                <li>QR/barcode data</li>
+                <li>User profile information</li>
+                <li>Metadata</li>
+                <li>App usage history</li>
+            </ul>
+
+            <h3>7.2 User-controlled Sharing</h3>
+            <p>Sharing only possible when user actively chooses:</p>
+            <ul>
+                <li><strong>Manual Export:</strong> User exports and shares files</li>
+                <li><strong>Share Link:</strong> User-generated share links</li>
+                <li><strong>Cloud Upload:</strong> User uploads to chosen cloud service</li>
+            </ul>
+
+            <!-- 8. User Rights -->
+            <h2 id="section8">8. User Rights</h2>
+
+            <h3>8.1 Access Rights</h3>
+            <p>Users can access all their data anytime through QRVideo's Videos tab.</p>
+
+            <h3>8.2 Modification Rights</h3>
+            <ul>
+                <li>Edit metadata (notes, status, etc.)</li>
+                <li>Modify user profile information</li>
+                <li>Change app settings</li>
+            </ul>
+
+            <h3>8.3 Deletion Rights</h3>
+            <ul>
+                <li>Delete individual video files</li>
+                <li>Delete data from specific date range</li>
+                <li>Delete all data</li>
+                <li>Delete all related data when removing app</li>
+            </ul>
+
+            <!-- 9. Policy Changes -->
+            <h2 id="section9">9. Policy Changes</h2>
+
+            <h3>9.1 Change Notification</h3>
+            <ul>
+                <li>This privacy policy may change anytime</li>
+                <li>Major changes communicated with app updates</li>
+                <li>This page's "Last Updated" date updates with changes</li>
+            </ul>
+
+            <!-- 10. Contact Us -->
+            <h2 id="section10">10. Contact Us</h2>
+
+            <p>For questions about this privacy policy, contact:</p>
+
+            <div class="highlight-box">
+                <strong>📧 Email:</strong> privacy@qrvideo.app<br>
+                <strong>🌐 Website:</strong> www.qrvideo.app<br>
+                <strong>📱 Support:</strong> support@qrvideo.app<br>
+                <strong>📝 Feedback:</strong> feedback@qrvideo.app
+            </div>
+
+            <h3>10.1 Response Time</h3>
+            <p>We respond to inquiries within 5-7 business days.</p>
+
+            <!-- Compliance -->
+            <h2>Appendix: App Store Compliance</h2>
+
+            <h3>Apple App Store Compliance</h3>
+            <ul>
+                <li>✅ Minimal data collection</li>
+                <li>✅ Consent-based permission management</li>
+                <li>✅ Transparent privacy policy</li>
+                <li>✅ COPPA compliance for child protection</li>
+                <li>✅ Data security and encryption</li>
+            </ul>
+
+            <h3>Google Play Store Compliance</h3>
+            <ul>
+                <li>✅ Privacy policy disclosure</li>
+                <li>✅ No unnecessary permissions</li>
+                <li>✅ Clear data usage purposes</li>
+                <li>✅ User data security guarantee</li>
+                <li>✅ Permission abuse prevention</li>
+            </ul>
+
+            <h3>GDPR Compliance</h3>
+            <ul>
+                <li>✅ Respect for data subject rights</li>
+                <li>✅ Clear privacy policy</li>
+                <li>✅ Data minimization principle</li>
+                <li>✅ Data security obligations</li>
+                <li>✅ Data deletion rights</li>
+            </ul>
+
+            <div class="last-updated">
+                <p>Last Updated: March 25, 2026</p>
+                <p>QRVideo © 2026. All rights reserved.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p><a href="introduce_us.html" style="color: #667eea; text-decoration: none;">← Back to App Overview</a></p>
+            <p style="margin-top: 15px;">QRVideo Privacy Policy</p>
+        </footer>
+    </div>
+</body>
+</html>

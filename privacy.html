@@ -71,6 +71,33 @@
             background: #764ba2;
         }
 
+        .language-selector {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .language-selector a {
+            display: inline-block;
+            padding: 8px 12px;
+            margin: 0 5px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .language-selector a.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .language-selector a:hover {
+            background: #667eea;
+            color: white;
+        }
+
         .content {
             background: white;
             border-radius: 15px;
@@ -235,6 +262,11 @@
 <body>
     <div class="container">
         <header>
+            <div class="language-selector">
+                <a href="privacy.html" class="lang-link active">한국어</a>
+                <a href="privacy_us.html" class="lang-link">English</a>
+                <a href="privacy_ch.html" class="lang-link">中文</a>
+            </div>
             <h1><img src="res/icon.png" alt="QRVideo Icon"> 개인정보처리방침</h1>
             <p>QRVideo 개인정보보호 정책</p>
             <a href="introduce.html" class="nav-link">← 앱 소개로 돌아가기</a>
